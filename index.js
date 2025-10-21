@@ -77,7 +77,7 @@ app.get('/test', (req, res) => {
 app.get('/test-email', async (req, res) => {
   try {
     await gmailTransport.sendMail({
-      from: Achadinhos Xpress <${process.env.GMAIL_USER}>,
+      from: `Achadinhos Xpress <${process.env.GMAIL_USER}>`,
       to: process.env.GMAIL_USER,
       subject: 'Teste de e-mail automático 🚀',
       html: '<h3>Servidor Railway + Gmail funcionando ✅</h3>'

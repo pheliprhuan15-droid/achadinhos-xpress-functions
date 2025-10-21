@@ -28,7 +28,7 @@ const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 exports.sendEmail = functions.https.onCall(async (data) => {
   const { to, subject, html } = data;
   await gmailTransport.sendMail({
-    from: Achadinhos Xpress <${process.env.GMAIL_USER}>,
+    from: `Achadinhos Xpress <${process.env.GMAIL_USER}>`,
     to,
     subject,
     html
